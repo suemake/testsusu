@@ -1,0 +1,85 @@
+/* 스크롤바 숨기기 */
+::-webkit-scrollbar {
+    width: 0 !important;
+    /* 수직 뿐 아니라 가로도 숨기고 싶다면 height:0 추가 */
+    height: 0 !important;
+    background: transparent !important;
+}
+
+/* Firefox */
+body {
+    scrollbar-width: none;
+}
+
+/* IE, Edge */
+body {
+    -ms-overflow-style: none;
+}
+
+
+.category {
+    position: sticky;
+    min-height: 0;
+    padding: 16px 0 16px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    /* background: #222; */
+    background: #fff;
+
+    height: calc(100vh - 80px);
+}
+
+.category.first {
+    top: calc(200px);
+    /* height: calc(100vh - 80px);
+    높이가 있으면 마지막에 들여올려짐 문제발생 */
+
+}
+
+.category.second {
+    top: calc(200px + 52px);
+
+}
+
+.category.third {
+    top: calc(200px + 104px);
+}
+
+.category.fourth {
+    top: calc(200px + 156px);
+}
+
+.category.fifth {
+    opacity: 0;
+}
+
+.category.sixth {
+    opacity: 0;
+}
+
+
+
+.category_wrap {}
+
+
+.txt {
+    margin-bottom: 16px;
+    display: grid;
+    min-height: 0;
+    /* overflow: hidden; */
+    grid-template-columns: repeat(2, 1fr);
+
+    /* color: #fff; */
+}
+
+.txt strong {
+    font-size: 24px;
+}
+
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 2;
+}
